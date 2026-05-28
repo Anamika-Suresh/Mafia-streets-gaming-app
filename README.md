@@ -79,10 +79,6 @@ cd C:\Users\ANAMIKA\Desktop\Game_APP\mumbai-mafia
 # Build APK
 node C:\Users\ANAMIKA\Desktop\Game_APP\node_modules\cordova\bin\cordova build android
 ```
-<video src="App_Working_In_Android.mp4" width="100%" controls>
-  Your browser does not support the video tag.
-</video>
----
 
 ## 🛠️ Challenges Faced & Resolutions
 
