@@ -1,0 +1,10 @@
+node_modules/
+node-portable/
+mumbai-mafia/node_modules/
+mumbai-mafia/platforms/
+jdk21/
+gradle/
+temp-zip-folder/
+.gradle/
+.idea/
+.vscode/

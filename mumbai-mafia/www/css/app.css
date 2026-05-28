@@ -1,0 +1,782 @@
+/* Custom CSS for Mafia Streets Cordova + Ext JS Game Demo */
+
+:root {
+    --bg-dark: #0b0b0f;
+    --bg-card: rgba(20, 20, 27, 0.85);
+    --border-color: rgba(217, 33, 54, 0.25);
+    --border-glow: rgba(217, 33, 54, 0.4);
+    --red-primary: #e74c3c;
+    --red-hover: #c0392b;
+    --red-glow: rgba(231, 76, 60, 0.5);
+    --gold-primary: #f39c12;
+    --gold-glow: rgba(243, 156, 18, 0.4);
+    --purple-primary: #9b59b6;
+    --purple-hover: #8e44ad;
+    --purple-glow: rgba(155, 89, 182, 0.4);
+    --text-primary: #f5f6fa;
+    --text-muted: #a4b0be;
+    --text-dark: #121216;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Ext JS Triton Overrides for Dark Mode */
+.x-panel {
+    background-color: transparent !important;
+}
+
+.x-panel-body-default {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+    border: none !important;
+}
+
+.x-window {
+    background-color: rgba(15, 15, 20, 0.95) !important;
+    border: 1px solid var(--red-primary) !important;
+    box-shadow: 0 0 20px var(--red-glow) !important;
+}
+
+.x-window-header-default {
+    background-color: rgba(25, 25, 35, 0.95) !important;
+    border-bottom: 1px solid var(--red-primary) !important;
+}
+
+.x-title-text-default {
+    color: var(--gold-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Glassmorphic App Containers */
+.mafia-glass-panel {
+    background-color: var(--bg-card) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
+    margin: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mafia-glass-panel:hover {
+    border-color: var(--border-glow) !important;
+    box-shadow: 0 8px 32px 0 rgba(231, 76, 60, 0.15) !important;
+}
+
+/* Fonts and Titles */
+.mafia-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 15px 0;
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+}
+
+.mafia-subtitle {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 14px !important;
+    color: var(--text-muted) !important;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Forms and Inputs */
+.mafia-input .x-form-item-label {
+    color: var(--text-muted) !important;
+    font-weight: 600 !important;
+}
+
+.mafia-input input {
+    background-color: rgba(30, 30, 40, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 6px !important;
+    color: var(--text-primary) !important;
+    padding: 8px 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.mafia-input input:focus {
+    border-color: var(--red-primary) !important;
+    box-shadow: 0 0 8px var(--red-glow) !important;
+}
+
+/* Custom Buttons */
+.mafia-btn {
+    border-radius: 6px !important;
+    border: none !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.mafia-btn-red {
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+    box-shadow: 0 4px 12px var(--red-glow) !important;
+}
+
+.mafia-btn-red:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px var(--red-glow), 0 0 10px rgba(255, 255, 255, 0.2) !important;
+}
+
+.mafia-btn-gold {
+    background: linear-gradient(135deg, #f39c12, #d35400) !important;
+    box-shadow: 0 4px 12px var(--gold-glow) !important;
+}
+
+.mafia-btn-gold:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px var(--gold-glow), 0 0 10px rgba(255, 255, 255, 0.2) !important;
+}
+
+.mafia-btn-dark {
+    background-color: rgba(40, 40, 50, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-primary) !important;
+}
+
+.mafia-btn-dark:hover {
+    background-color: rgba(60, 60, 75, 0.9) !important;
+    border-color: var(--text-muted) !important;
+}
+
+/* User Profile & Stats Header */
+.stats-container {
+    background-color: rgba(15, 15, 22, 0.9) !important;
+    border-bottom: 2px solid var(--red-primary) !important;
+    padding: 10px 15px !important;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 5px;
+}
+
+.stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.stat-value-gold {
+    color: #f1c40f !important;
+    text-shadow: 0 0 5px rgba(241, 196, 15, 0.3);
+}
+
+.stat-value-red {
+    color: #e74c3c !important;
+}
+
+/* Custom Progress Bars (Health/Energy) */
+.mafia-progress-health .x-progress-bar {
+    background: linear-gradient(90deg, #c0392b, #e74c3c) !important;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.4);
+}
+
+.mafia-progress-energy .x-progress-bar {
+    background: linear-gradient(90deg, #2980b9, #3498db) !important;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+.mafia-progress-enemy .x-progress-bar {
+    background: linear-gradient(90deg, #8e44ad, #9b59b6) !important;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.4);
+}
+
+.x-progress-default {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 6px;
+    height: 18px !important;
+}
+
+.x-progress-text {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+}
+
+/* Portraits and Banners */
+.portrait-container {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #050508;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.portrait-container.red-glow {
+    border-color: var(--red-primary);
+    box-shadow: 0 0 15px var(--red-glow);
+}
+
+.portrait-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dialogue Box (Rhea's instructions) */
+.dialogue-box {
+    background-color: rgba(25, 25, 35, 0.8) !important;
+    border-left: 4px solid var(--red-primary) !important;
+    padding: 12px 15px !important;
+    border-radius: 4px !important;
+    margin: 10px 0;
+}
+
+.dialogue-speaker {
+    font-weight: 800;
+    color: var(--gold-primary);
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.dialogue-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+/* Map Cards (Area Navigation) */
+.area-card {
+    background-color: rgba(30, 30, 40, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.area-card:hover {
+    background-color: rgba(231, 76, 60, 0.1) !important;
+    border-color: var(--red-primary) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.15) !important;
+}
+
+.area-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.area-danger {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.area-danger-low {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+}
+
+.area-danger-med {
+    background-color: rgba(241, 196, 15, 0.2);
+    color: #f1c40f;
+}
+
+.area-danger-high {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+}
+
+/* Inventory Items */
+.item-card {
+    background-color: rgba(25, 25, 35, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    margin-bottom: 10px !important;
+    transition: all 0.2s ease !important;
+}
+
+.item-card:hover {
+    border-color: var(--gold-primary) !important;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.1) !important;
+}
+
+.item-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.item-type {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.item-stat {
+    font-size: 12px;
+    color: var(--gold-primary);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.item-stars {
+    color: #f1c40f;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+/* Fight Screen Styling */
+.fight-log-panel {
+    background-color: rgba(5, 5, 8, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.fight-log-entry {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.fight-log-player {
+    color: #2ecc71;
+}
+
+.fight-log-enemy {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.fight-log-system {
+    color: #f1c40f;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes flash-red {
+    0%, 100% { box-shadow: 0 0 5px rgba(231, 76, 60, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(231, 76, 60, 0.8); }
+}
+
+.animate-pulse-red {
+    animation: flash-red 1.5s infinite;
+}
+
+@keyframes damage-float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-30px) scale(1.2); opacity: 0; }
+}
+
+.damage-text-indicator {
+    position: absolute;
+    font-size: 24px;
+    font-weight: 800;
+    z-index: 1000;
+    pointer-events: none;
+    text-shadow: 0 0 10px #000, 0 0 5px #000;
+    animation: damage-float 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+.damage-text-player {
+    color: #e74c3c;
+}
+
+.damage-text-enemy {
+    color: #2ecc71;
+}
+
+/* Custom Purple Button */
+.mafia-btn-purple {
+    background: linear-gradient(135deg, var(--purple-primary), var(--purple-hover)) !important;
+    box-shadow: 0 4px 12px var(--purple-glow) !important;
+}
+
+.mafia-btn-purple:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px var(--purple-glow), 0 0 10px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Character Selection Layout */
+.char-select-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.char-card {
+    flex: 1;
+    background: rgba(20, 20, 27, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 140px;
+}
+
+.char-card:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+.char-card.selected-maya {
+    border-color: var(--purple-primary);
+    box-shadow: 0 0 15px var(--purple-glow);
+    background: rgba(155, 89, 182, 0.12);
+}
+
+.char-card.selected-vikra {
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 15px var(--gold-glow);
+    background: rgba(243, 156, 18, 0.12);
+}
+
+.char-avatar-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 0 auto 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #15151e;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.char-card.selected-maya .char-avatar-box {
+    border-color: var(--purple-primary);
+    background: #2b1836;
+    box-shadow: 0 0 8px var(--purple-glow);
+}
+
+.char-card.selected-vikra .char-avatar-box {
+    border-color: var(--gold-primary);
+    background: #3a2512;
+    box-shadow: 0 0 8px var(--gold-glow);
+}
+
+.char-name {
+    font-size: 13px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.char-role {
+    font-size: 10px;
+    color: var(--gold-primary);
+    margin-bottom: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.char-desc {
+    font-size: 9px;
+    color: var(--text-muted);
+    line-height: 1.3;
+    margin-bottom: 8px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.char-stat-badge {
+    font-size: 9px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.char-stat-badge.maya-badge {
+    background: var(--purple-primary);
+}
+
+.char-stat-badge.vikra-badge {
+    background: #d35400;
+}
+
+/* Scrolling News Ticker */
+.news-ticker-container {
+    background: #08080c;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    height: 28px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.news-ticker-label {
+    background: var(--red-primary);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.news-ticker-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.news-ticker-text {
+    white-space: nowrap;
+    position: absolute;
+    will-change: transform;
+    animation: ticker-animation 30s linear infinite;
+    color: #f1c40f;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes ticker-animation {
+    0% { transform: translate3d(100vw, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.cooldown-text {
+    font-size: 10px;
+    color: #ff7675;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* Dynamic Mafia Streets Logo Banner */
+.dynamic-logo-banner {
+    text-align: center;
+    padding: 20px 10px;
+    background: rgba(10, 10, 15, 0.7);
+    border: 1px solid rgba(231, 76, 60, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.12), inset 0 0 15px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+.dynamic-logo-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(231, 76, 60, 0.08) 0%, transparent 70%);
+    animation: radial-pulse 4s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes radial-pulse {
+    0%, 100% { transform: scale(0.9); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+.dynamic-logo-subtitle-top {
+    font-size: 10px;
+    font-weight: 800;
+    color: #f1c40f;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(241, 196, 15, 0.4);
+    margin-bottom: 4px;
+}
+
+.dynamic-logo-title {
+    font-size: 32px;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(135deg, #e74c3c 0%, #f39c12 50%, #e74c3c 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shine 5s linear infinite, logo-glow 2.5s ease-in-out infinite alternate;
+    line-height: 1;
+    margin: 5px 0;
+    filter: drop-shadow(0 0 8px rgba(231, 76, 60, 0.4));
+}
+
+.dynamic-logo-title-animated {
+    font-size: 32px;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+.logo-char {
+    display: inline-block;
+    background: linear-gradient(135deg, #e74c3c 0%, #f39c12 50%, #e74c3c 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shine 5s linear infinite, logo-letter-jump 2.5s ease-in-out infinite;
+    animation-delay: calc(var(--char-index) * 0.1s);
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.4);
+    filter: drop-shadow(0 0 4px rgba(231, 76, 60, 0.4));
+    transform-origin: bottom center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+@keyframes logo-letter-jump {
+    0%, 100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 4px rgba(231, 76, 60, 0.4));
+    }
+    15% {
+        transform: translateY(-10px) scale(1.18) rotate(-4deg);
+        filter: drop-shadow(0 6px 14px rgba(243, 156, 18, 0.7)) drop-shadow(0 0 8px rgba(231, 76, 60, 0.6));
+    }
+    30% {
+        transform: translateY(0) scale(0.92) rotate(2deg);
+        filter: drop-shadow(0 0 4px rgba(231, 76, 60, 0.4));
+    }
+}
+
+.logo-char:hover {
+    animation: letter-hover-spin 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards !important;
+    cursor: pointer;
+}
+
+@keyframes letter-hover-spin {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.4) translateY(-15px) rotate(-15deg); }
+    100% { transform: scale(1.2) translateY(-5px) rotate(360deg); }
+}
+
+.logo-space {
+    width: 10px;
+    display: inline-block;
+}
+
+/* Passive floating animations for character cards */
+#char-card-maya {
+    animation: float-passive-1 5s ease-in-out infinite;
+}
+
+#char-card-vikra {
+    animation: float-passive-2 5.5s ease-in-out infinite;
+}
+
+@keyframes float-passive-1 {
+    0%, 100% {
+        transform: translate3d(0px, 0px, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate3d(0px, -6px, 0) rotate(0.8deg);
+    }
+}
+
+@keyframes float-passive-2 {
+    0%, 100% {
+        transform: translate3d(0px, 0px, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate3d(0px, -7px, 0) rotate(-0.8deg);
+    }
+}
+
+/* Dragging active state */
+.char-card.dragging {
+    animation: none !important;
+    cursor: grabbing !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(231, 76, 60, 0.4) !important;
+    transition: none !important;
+}
+
+@keyframes text-shine {
+    to { background-position: 200% center; }
+}
+
+@keyframes logo-glow {
+    from {
+        filter: drop-shadow(0 0 4px rgba(231, 76, 60, 0.4));
+    }
+    to {
+        filter: drop-shadow(0 0 12px rgba(231, 76, 60, 0.8)) drop-shadow(0 0 4px rgba(243, 156, 18, 0.5));
+    }
+}
+
+.dynamic-logo-subtitle-bottom {
+    font-size: 9px;
+    font-weight: 600;
+    color: #a4b0be;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    opacity: 0.8;
+}

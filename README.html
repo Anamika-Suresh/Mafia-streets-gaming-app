@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafia Streets - Readme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root {
+            --bg-dark: #0b0b0f;
+            --bg-card: rgba(20, 20, 27, 0.85);
+            --border-color: rgba(217, 33, 54, 0.25);
+            --red-primary: #e74c3c;
+            --gold-primary: #f39c12;
+            --text-primary: #f5f6fa;
+            --text-muted: #a4b0be;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 22px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 30px;
+            color: var(--gold-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #dcdde1;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: var(--red-primary);
+            font-weight: 600;
+        }
+
+        .code-box {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            color: #3ae374;
+            margin: 15px 0;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 220px;
+            background: rgba(30, 30, 40, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card-title {
+            font-weight: 800;
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mafia Streets</h1>
+        <div class="subtitle">Underworld Syndicate RPG - Rebranded and enhanced from Mumbai Mafia</div>
+
+        <h2><i class="fa fa-star"></i> Implemented Features</h2>
+        
+        <h3>1. Rebranding & UI Aesthetics</h3>
+        <ul>
+            <li><span class="highlight">Animated Logo:</span> Replaced the static logo with a letter-by-letter CSS-animated title. Individual letters float, jump in sequence, and spin on cursor hover. It features a neon shine and radial underworld pulse glow.</li>
+            <li><span class="highlight">Movable Character Selection:</span> Interactive selection cards for choosing between <b>Maya</b> and <b>Vikra</b>:
+                <ul>
+                    <li><b>3D Tilt Hover:</b> Hovering over cards tilts them dynamically in 3D perspective space based on the mouse pointer position.</li>
+                    <li><b>Breathing Float:</b> Cards float passively with sinusoidal waves (each character has different wave delays for natural movement).</li>
+                    <li><b>Rubber-Band Dragging:</b> Cards can be clicked/touched and dragged around the screen freely, springing back to their slots with a physical snap transition on release.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2. Gameplay Mechanics</h3>
+        <ul>
+            <li><span class="highlight">Maya (The Mastermind):</span> Starts with Lathi (equipped), 60 max energy, base attack 12, defense 15. Special: <i>Calculated Strike</i> (bypasses defense, double damage, restores +10 energy, 3-turn cooldown).</li>
+            <li><span class="highlight">Vikra (The Enforcer):</span> Starts with Lathi (equipped), 120 max HP, base attack 18, defense 8. Special: <i>Underworld Rage</i> (+50% attack power for 2 turns, +15 HP instant heal, 3-turn cooldown).</li>
+            <li><span class="highlight">HTML5 Synthesized Audio:</span> Built a synthesized sound system using the browser's native <b>Web Audio API</b> for real-time retro game sound effects (Hit, Heal, Level Up, Victory, Defeat, and Bribe).</li>
+            <li><span class="highlight">Corrupt Cop Street Encounter:</span> Territory raids have a 25% chance of triggering <b>Inspector Shinde</b>, demanding a ₹80 bribe. Pay to escape safely (gain +30 EXP) or fight him in a mini-boss battle.</li>
+            <li><span class="highlight">Gossip Ticker:</span> Scrolling underworld news marquee footer displaying live syndicate gossip.</li>
+        </ul>
+
+        <h2><i class="fa fa-rocket"></i> Deliverables in Workspace</h2>
+        <p>The project directory includes pre-compiled artifacts and the web deployment link:</p>
+        
+        <div class="flex-container">
+            <div class="card">
+                <div class="card-title"><i class="fa fa-globe" style="color: #3498db;"></i> Live Web Link</div>
+                <p style="margin-top: 5px; font-size: 13px;">Mentor-ready public URL. Play instantly in any web browser:</p>
+                <a href="http://mafia-streets-mumbai.surge.sh" target="_blank" class="btn-link">Play Game</a>
+            </div>
+            <div class="card">
+                <div class="card-title"><i class="fa fa-android" style="color: #2ecc71;"></i> Android Build</div>
+                <p style="margin-top: 5px; font-size: 13px;">Compiled Android application package:</p>
+                <p style="font-family: monospace; font-size: 13px; color: var(--gold-primary); margin: 5px 0;">mafia-streets.apk</p>
+            </div>
+            <div class="card">
+                <div class="card-title"><i class="fa fa-file-archive-o" style="color: #f1c40f;"></i> Source Code</div>
+                <p style="margin-top: 5px; font-size: 13px;">Clean project ZIP archive (excluding build artifacts):</p>
+                <p style="font-family: monospace; font-size: 13px; color: var(--gold-primary); margin: 5px 0;">mafia-streets-project.zip</p>
+            </div>
+        </div>
+
+        <h2><i class="fa fa-terminal"></i> How to Run & Build</h2>
+        
+        <h3>Local Browser Testing</h3>
+        <p>To run the developer server locally:</p>
+        <div class="code-box">
+# Prepend node-portable to path
+$env:PATH = "C:\Users\ANAMIKA\Desktop\Game_APP\node-portable;" + $env:PATH
+
+# Navigate to project and run browser platform
+cd C:\Users\ANAMIKA\Desktop\Game_APP\mumbai-mafia
+node C:\Users\ANAMIKA\Desktop\Game_APP\node_modules\cordova\bin\cordova run browser
+        </div>
+
+        <h3>Rebuilding the Android APK</h3>
+        <p>To compile the project from source:</p>
+        <div class="code-box">
+# Include Gradle, OpenJDK 21, and Android SDK tools in PATH
+$env:PATH = "C:\Users\ANAMIKA\Desktop\Game_APP\node-portable;C:\Users\ANAMIKA\Desktop\Game_APP\jdk21\jdk-21.0.11+10\bin;C:\Users\ANAMIKA\Desktop\Game_APP\gradle\gradle-8.5\bin;C:\Users\ANAMIKA\AppData\Local\Android\Sdk\cmdline-tools\latest\bin;C:\Users\ANAMIKA\AppData\Local\Android\Sdk\platform-tools;" + $env:PATH
+
+# Set Home paths
+$env:JAVA_HOME = "C:\Users\ANAMIKA\Desktop\Game_APP\jdk21\jdk-21.0.11+10"
+$env:ANDROID_HOME = "C:\Users\ANAMIKA\AppData\Local\Android\Sdk"
+
+# Compile Android build
+cd C:\Users\ANAMIKA\Desktop\Game_APP\mumbai-mafia
+node C:\Users\ANAMIKA\Desktop\Game_APP\node_modules\cordova\bin\cordova build android
+        </div>
+
+        <h2><i class="fa fa-wrench"></i> Challenges & Resolutions</h2>
+        <ul>
+            <li><b>Missing JDK Compiler (jlink)</b>: Resolved by downloading and configuring a portable OpenJDK 21 distribution, resolving compilation errors caused by the headless RedHat JRE.</li>
+            <li><b>Missing Gradle Build Daemon</b>: Configured a portable Gradle 8.5 installation in the PATH variables.</li>
+            <li><b>Android API Targets</b>: Installed target API Platform 36 and Command-line Tools via the `android` CLI tool.</li>
+        </ul>
+    </div>
+</body>
+</html>
