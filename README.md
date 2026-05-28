@@ -6,11 +6,11 @@ Rebranded and enhanced from *Mumbai Mafia*. Built with **Apache Cordova** + **Ex
 ## 📱 Mobile App Demo
 Watch the gameplay demonstration running natively on an Android device:
 
-[🎥 Watch App Working In Android Video (App_Working_In_Android.mp4)](https://github.com/Anamika-Suresh/Mafia-streets-gaming-app/blob/main/App_Working_In_Android.mp4)
+[🎥 Watch App Working In Android Video (App_Working_In_Android.mp4)](https://raw.githubusercontent.com/Anamika-Suresh/Mafia-streets-gaming-app/main/App_Working_In_Android.mp4)
 
 *(Alternatively, you can play the video file directly below:)*
 
-<video src="App_Working_In_Android.mp4" width="100%" controls></video>
+<video src="https://raw.githubusercontent.com/Anamika-Suresh/Mafia-streets-gaming-app/main/App_Working_In_Android.mp4" width="100%" controls></video>
 
 ---
 
