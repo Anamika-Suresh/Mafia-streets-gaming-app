@@ -68,7 +68,7 @@ cd C:\Users\ANAMIKA\Desktop\Game_APP\mumbai-mafia
 # Build APK
 node C:\Users\ANAMIKA\Desktop\Game_APP\node_modules\cordova\bin\cordova build android
 ```
-
+[Demo Video](./App_Working_In_Android.mp4)
 ---
 
 ## 🛠️ Challenges Faced & Resolutions
